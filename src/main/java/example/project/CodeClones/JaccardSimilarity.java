@@ -7,7 +7,11 @@ public class JaccardSimilarity {
 
     public static double computeJaccardSimilarity(Set<String> set1, Set<String> set2) {
         // TODO: implement this function to compute the Jaccard similarity between two string arrays
-        return -1.0;
+        Set<String> intersect = new HashSet<>(set1);
+        intersect.retainAll(set2);
+        float numerator = intersect.size();
+        float denominator = set1.size()+set2.size()-numerator;
+        return (numerator/denominator);
     }
 
 }

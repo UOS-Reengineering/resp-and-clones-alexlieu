@@ -33,20 +33,35 @@ public class ExtractMethods {
         System.out.println();
     }
 
+    public static int[] initialiseArray(int length) {
+        int[] array = new int[length];
+        for (int i = 0; i<length; i++) {
+            array[i] = (int) (Math.random() * 10);
+        }
+        return array;
+    }
+
+    public static void printArrayWithDelimiter(int[] array, String delimeter) {
+        for (int i = 0; i<array.length; i++) {
+            System.out.print(array[i] + delimeter);
+        }
+        System.out.println();
+    }
+
     public static void foo_after_refactoring() {
         // TODO: uncomment the following lines and complete missing methods
 
 //        // initialise an array of random numbers with the size of 10
-//        int[] array1 = initialiseArray(10);
+        int[] array1 = initialiseArray(10);
 //
 //        // print the array with a given delimiter
-//        printArrayWithDelimiter(array1, " ");
+        printArrayWithDelimiter(array1, " ");
 //
 //        // initialise another array of random numbers with the size of 10
-//        int[] array2 = initialiseArray(10);
+        int[] array2 = initialiseArray(10);
 //
 //        // print the array with a given delimiter
-//        printArrayWithDelimiter(array2, " ");
+        printArrayWithDelimiter(array2, " ");
     }
 
 

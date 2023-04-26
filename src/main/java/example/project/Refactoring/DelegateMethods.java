@@ -26,6 +26,7 @@ public class DelegateMethods {
      */
     public static int createRandomInteger(int max) {
         // TODO: delegate the call to `createRandomValue()` method.
-        return -1;
+        int randomValue = createRandomValue(0, max);
+        return randomValue;
     }
 }
